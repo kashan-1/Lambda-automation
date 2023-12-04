@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-east-1"
+}
 data "archive_file" "zip_the_python_code" {
   type        = "zip"
   source_dir  = "./codejs"
