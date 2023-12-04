@@ -36,9 +36,9 @@ jobs:
             cd terraform
             ls
             terraform init
-            echo  ${{ secrets.AWS_ACCESS_KEY_ID }}
-            echo ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            echo ${{ secrets.AWS_SESSION_TOKEN }}
+            echo "AWS Access Key ID: ${{ secrets.AWS_ACCESS_KEY_ID }}"
+            echo "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+            echo "${{ secrets.AWS_SESSION_TOKEN }}"
           
         - name: terraform validate
           run: |
