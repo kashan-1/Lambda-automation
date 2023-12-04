@@ -34,13 +34,20 @@ jobs:
         - name: terraform init
           run: |
             cd terraform
+            ls
             terraform init
           
         - name: terraform validate
-          run: terraform validate
+          run: |
+            cd terraform
+            ls 
+            terraform validate
 
         - name: terraform apply
-          run: terraform apply
+          run: |
+            cd terraform
+            ls
+            terraform apply
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             TF_ACTION_WORKING_DIR: 'terraform'
