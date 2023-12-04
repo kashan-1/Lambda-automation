@@ -32,10 +32,10 @@ jobs:
             AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 
-        - name: Terraform Validate
+        - name: terraform validate
           uses: hashicorp/terraform-github-actions/validate@v0.3.7
 
-        - name: Terraform Apply
+        - name: terraform apply
           uses: hashicorp/terraform-github-actions/apply@v0.4.0
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
