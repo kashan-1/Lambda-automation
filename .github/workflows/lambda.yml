@@ -12,7 +12,7 @@ env:
 jobs:
   tf-fmt:
     name: Deploy Site
-    runs-on: terraform-latest
+    runs-on: ubuntu-latest
     steps:
      
         - name: Checkout Repo
@@ -34,7 +34,7 @@ jobs:
             # AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
 
         - name: terraform validate
-          uses: hashicorp/terraform-github-actions/validate@v0.3.7
+          run: terraform validate
 
         - name: terraform apply
           uses: hashicorp/terraform-github-actions/apply@v0.4.0
