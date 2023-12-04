@@ -36,6 +36,7 @@ jobs:
             cd terraform
             ls
             terraform init
+            aws configure
           
         - name: terraform validate
           run: |
